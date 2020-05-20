@@ -1,5 +1,9 @@
 FROM php:7.4.5-fpm-alpine3.11
 
+#DR certs
+COPY ./ssl/nginx.crt /etc/ssl/
+COPY ./ssl/nginx.key /etc/ssl/
+
 LABEL maintainer="Ric Harvey <ric@ngd.io>"
 
 ENV php_conf /usr/local/etc/php-fpm.conf
