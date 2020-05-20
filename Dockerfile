@@ -242,6 +242,9 @@ mkdir /var/www/html/
 ADD conf/nginx-site.conf /etc/nginx/sites-available/default.conf
 ADD conf/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
 RUN ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
+RUN ln -s /etc/nginx/sites-available/default-ssl.conf /etc/nginx/sites-enabled/
+
+
 
 ## disabled due to license changes (to fix in next release)
 # Add GeoLite2 databases (https://dev.maxmind.com/geoip/geoip2/geolite2/)
